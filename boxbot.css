@@ -1,0 +1,16 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 1240px;
+  margin: 20px auto;
+  padding-right: 10px;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.boxbot {
+  position: relative;
+}
