@@ -14,3 +14,27 @@ body {
 .boxbot {
   position: relative;
 }
+
+.boxbot-map {
+  border-collapse: collapse;
+  float: left;
+}
+
+td.boxbot-box {
+  border: 1px solid #bdc3c7;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.boxbot-box[data-type="y-axis"],
+.boxbot-box[data-type="x-axis"] {
+  border: 0;
+}
+
+.boxbot-box[data-type="y-axis"] {
+  text-align: right;
+}
+
+.boxbot-box[data-type="x-axis"] {
+  text-align: center;
+}
