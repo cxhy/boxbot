@@ -39,5 +39,5 @@ BoxbotMap.prototype.create = function(columns, rows) {
   this.columns = columns
   this.rows = rows
   this.element.innerHTML = html
-  this.boxs = this.element.getElementsByTagName('td')
+  //this.boxs = this.element.getElementsByTagName('td')
 }

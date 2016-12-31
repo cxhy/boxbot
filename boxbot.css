@@ -15,6 +15,24 @@ body {
   position: relative;
 }
 
+.boxbot-box {
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+}
+
+.boxbot-bot {
+  position: absolute;
+  padding-left: 1px;
+  padding-top: 1px;
+}
+
+.boxbot-bot img {
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
 .boxbot-map {
   border-collapse: collapse;
   float: left;
@@ -38,3 +56,5 @@ td.boxbot-box {
 .boxbot-box[data-type="x-axis"] {
   text-align: center;
 }
+
+
