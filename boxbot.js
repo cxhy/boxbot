@@ -6,6 +6,6 @@
  */
 
 var Boxbot = function(){
-  this.map = new BoxboMap('.boxbot-map')
+  this.map = new BoxbotMap('.boxbot-map')
   this.map.create(20,20)
 }

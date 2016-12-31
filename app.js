@@ -10,4 +10,4 @@ var Application= function(){
 }
 
 
-new Application()
+new Application();
