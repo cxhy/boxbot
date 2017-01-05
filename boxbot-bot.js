@@ -10,3 +10,8 @@ var BoxbotBot = function (selector) {
   this.element = document.querySelector(selector)
   this.init()
 }
+
+
+BoxbotBot.prototype.getCurrentOffset = function(direction) {
+  var offset = this.element.style[direction]
+};
