@@ -18,4 +18,12 @@ BoxbotBot.prototype.init = function() {
 
 BoxbotBot.prototype.getCurrentOffset = function(direction) {
   var offset = this.element.style[direction]
+  console.log(offset);
+  if(offset){
+    return parseInt(offset.replace('px',''));
+  }
+  else{
+    return 0;
+  }
 };
+
