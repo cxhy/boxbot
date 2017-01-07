@@ -27,3 +27,9 @@ BoxbotBot.prototype.getCurrentOffset = function(direction) {
   }
 };
 
+BoxbotBot.prototype.getCurrentPostion = function() {
+  return[
+  Math.round(this.getCurrentOffset('left') / this.element.clientWidth),
+  Math.round(this.getCurrentOffset('right')/ this.element.clientWidth)
+  ]
+};
