@@ -33,3 +33,7 @@ BoxbotBot.prototype.getCurrentPostion = function() {
   Math.round(this.getCurrentOffset('right')/ this.element.clientWidth)
   ]
 };
+
+BoxbotBot.prototype.getPostion = function(offset) {
+  // body...
+};
