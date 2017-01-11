@@ -13,11 +13,12 @@ var BoxbotBot = function (selector) {
 
 BoxbotBot.prototype.init = function() {
   this.element.style.left = this.element.clientWidth + 'px';
-  this.element.style.right = this.element.clientWidth + 'px';
+  this.element.style.top  = this.element.clientWidth + 'px';
 };
 
 BoxbotBot.prototype.getCurrentOffset = function(direction) {
   var offset = this.element.style[direction]
+//  debugger;
   console.log(offset);
   if(offset){
     return parseInt(offset.replace('px',''));
