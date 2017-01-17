@@ -16,6 +16,18 @@ BoxbotBot.prototype.init = function() {
   this.element.style.top  = this.element.clientWidth + 'px';
 };
 
+BoxbotBot.prototype.turn = function (direction) {
+  var ROTATE_MAP = {
+    0: {0:0, 90: 90, 180: 180, 270: -90},
+    90: {90: 0, 180: 90, 270: 180, 0: -90},
+    180: {180: 0, 270: 90, 0: 180, 90: -90},
+    270: {270: 0, 0: 90, 90: 180, 180: -90}
+  }
+  this.element.style.transform = 'rotate(' +
+    (this.getCurrentAngle() + ROTATE_MAP[this.getCurrentDirection()][direction]) + 'deg)'
+}
+
+
 BoxbotBot.prototype.getCurrentOffset = function(direction) {
   var offset = this.element.style[direction]
 //  debugger;
