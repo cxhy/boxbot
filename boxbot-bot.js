@@ -1,4 +1,4 @@
-/**
+a/**
  *
  * @authors Dezheng Guo
  * @date    2017-01-02 13:38:05
@@ -26,6 +26,16 @@ BoxbotBot.prototype.turn = function (direction) {
   this.element.style.transform = 'rotate(' +
     (this.getCurrentAngle() + ROTATE_MAP[this.getCurrentDirection()][direction]) + 'deg)'
 }
+
+BoxbotBot.prototype.getCurrentAngle = function () {
+  var match = this.element.style.transform.match(/rotate\((.*)deg\)/)
+  if (match) {
+    return parseInt(match[1])
+  } else {
+    return 0
+  }
+}
+
 
 
 BoxbotBot.prototype.getCurrentOffset = function(direction) {
