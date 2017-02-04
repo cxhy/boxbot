@@ -1,4 +1,4 @@
-a/**
+/**
  *
  * @authors Dezheng Guo
  * @date    2017-01-02 13:38:05
@@ -14,6 +14,7 @@ var BoxbotBot = function (selector) {
 BoxbotBot.prototype.init = function() {
   this.element.style.left = this.element.clientWidth + 'px';
   this.element.style.top  = this.element.clientWidth + 'px';
+  this.element.style.transform = 'rotate(90deg)';
 };
 
 BoxbotBot.prototype.turn = function (direction) {
@@ -37,11 +38,16 @@ BoxbotBot.prototype.getCurrentAngle = function () {
 }
 
 
+BoxbotBot.prototype.getCurrentDirection = function() {
+  var angle = this.getCurrentAngle() % 360;
+  return (angle >= 0) ? angle : angle + 360;
+};
+  //console.log(this.element.style[left]);
 
 BoxbotBot.prototype.getCurrentOffset = function(direction) {
   var offset = this.element.style[direction]
 //  debugger;
-  console.log(offset);
+  //console.log(this.element.style.left);
   if(offset){
     return parseInt(offset.replace('px',''));
   }
@@ -49,6 +55,7 @@ BoxbotBot.prototype.getCurrentOffset = function(direction) {
     return 0;
   }
 };
+  console.log(BoxbotBot.prototype.getCurrentOffset('left'));
 
 BoxbotBot.prototype.getCurrentPostion = function() {
   return[
